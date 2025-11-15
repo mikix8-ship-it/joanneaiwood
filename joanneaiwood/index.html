@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanne Aiwood — NYC heart, world soul</title>
+    <meta name="description" content="AI creator & traveler. Exclusive content, travel photos, and creative journey.">
+    <link rel="canonical" href="https://joanneaiwood.com">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joanneaiwood.com">
+    <meta property="og:title" content="Joanne Aiwood — NYC heart, world soul">
+    <meta property="og:description" content="AI creator & traveler. Exclusive content, travel photos, and creative journey.">
+    <meta property="og:image" content="/assets/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://joanneaiwood.com">
+    <link rel="dns-prefetch" href="https://joanneaiwood.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Joanne Aiwood",
+      "url": "https://joanneaiwood.com",
+      "sameAs": [
+        "https://www.instagram.com/joanne_aiwood/",
+        "https://www.instagram.com/j_aiwood/",
+        "https://t.me/+hoBUoJANcsdlMWVk",
+        "http://www.fanvue.com/love_joanna.a"
+      ],
+      "description": "NYC heart, world soul — AI creator & traveler"
+    }
+    </script>
+    
+    <!-- Analytics Placeholder -->
+    <!-- GA4: Replace with your tracking code -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+    <!-- Umami: Replace with your tracking code -->
+    <!-- <script async defer data-website-id="XXXX" src="https://analytics.example.com/umami.js"></script> -->
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main" class="skip-link">Skip to content</a>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+    
+    <!-- Main Container -->
+    <main id="main" class="container">
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="avatar-container">
+                <img src="/assets/avatar.jpg" alt="Joanne Aiwood" class="avatar" width="120" height="120">
+                <div class="avatar-status"></div>
+            </div>
+            <h1 class="profile-name">Joanne Aiwood</h1>
+            <p class="profile-tagline">NYC heart, world soul — AI creator & traveler</p>
+            
+            <!-- Share Actions -->
+            <div class="share-actions">
+                <button class="share-btn" id="shareBtn" aria-label="Share profile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                </button>
+                <button class="qr-btn" id="qrBtn" aria-label="Show QR code">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="3" height="3"></rect>
+                        <rect x="18" y="18" width="3" height="3"></rect>
+                        <rect x="14" y="18" width="3" height="3"></rect>
+                        <rect x="18" y="14" width="3" height="3"></rect>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        
+        <!-- Latest Update -->
+        <section class="latest-update" id="latestUpdate" style="display: none;">
+            <a href="#" class="latest-link" id="latestLink">
+                <span class="latest-badge">NEW</span>
+                <span class="latest-text"></span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+            </a>
+        </section>
+        
+        <!-- Featured Links -->
+        <section class="featured-links" id="featuredLinks"></section>
+        
+        <!-- Main Links -->
+        <section class="main-links" id="mainLinks"></section>
+        
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="gallery-header">
+                <h2>Travel & Moments</h2>
+                <div class="gallery-actions">
+                    <div class="filter-tags" id="filterTags">
+                        <button class="tag-pill active" data-tag="all">All</button>
+                    </div>
+                    <button class="admin-btn" id="adminBtn" aria-label="Open admin panel">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6m4.22-13.22l4.24 4.24M1.54 12h6m6 6l4.24 4.24M12 18.46V24"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+            <button class="load-more-btn" id="loadMoreBtn" style="display: none;">Load More</button>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Joanne Aiwood. All rights reserved.</p>
+    </footer>
+    
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" alt="">
+            <div class="lightbox-caption">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-description" id="lightboxDescription"></p>
+                <div class="lightbox-meta">
+                    <span class="lightbox-location" id="lightboxLocation"></span>
+                    <span class="lightbox-date" id="lightboxDate"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- QR Modal -->
+    <div class="qr-modal" id="qrModal" role="dialog" aria-label="QR Code" aria-hidden="true">
+        <div class="qr-modal-content">
+            <button class="qr-modal-close" id="qrModalClose" aria-label="Close QR">×</button>
+            <div id="qrCode"></div>
+            <p>Scan to visit my profile</p>
+        </div>
+    </div>
+    
+    <!-- Admin Modal -->
+    <div class="admin-modal" id="adminModal" role="dialog" aria-label="Gallery Admin" aria-hidden="true">
+        <div class="admin-modal-content">
+            <div class="admin-header">
+                <h2>Gallery Admin</h2>
+                <button class="admin-close" id="adminClose" aria-label="Close admin">×</button>
+            </div>
+            <div class="admin-body">
+                <div class="admin-actions">
+                    <div class="upload-area" id="uploadArea">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p>Drag & drop images here or click to browse</p>
+                        <input type="file" id="fileInput" accept="image/jpeg,image/jpg,image/png" multiple hidden>
+                    </div>
+                    <div class="admin-buttons">
+                        <button class="btn-secondary" id="importJsonBtn">Import gallery.json</button>
+                        <input type="file" id="jsonInput" accept=".json" hidden>
+                        <button class="btn-primary" id="exportZipBtn" disabled>Export as ZIP</button>
+                    </div>
+                </div>
+                <div class="admin-preview" id="adminPreview"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
