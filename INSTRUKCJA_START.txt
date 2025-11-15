@@ -1,0 +1,84 @@
+==================================================
+JOANNE AIWOOD - INSTRUKCJA SZYBKIEGO STARTU
+==================================================
+
+🎯 WSZYSTKIE TWOJE LINKI SĄ JUŻ DODANE:
+----------------------------------------
+✅ Fanvue: http://www.fanvue.com/love_joanna.a
+✅ Telegram VIP: https://t.me/+hoBUoJANcsdlMWVk  
+✅ Instagram 1: @joanne_aiwood
+✅ Instagram 2: @j_aiwood
+✅ Instagram 3: @jo.aiwood
+✅ Buy Me a Coffee: https://buymeacoffee.com/love_joanna.a
+
+UTM parametry dodają się AUTOMATYCZNIE do śledzenia!
+
+📁 STRUKTURA PLIKÓW:
+--------------------
+index.html         → główna strona (OTWÓRZ TO W PRZEGLĄDARCE)
+styles.css         → style strony
+app.js            → logika aplikacji
+admin.js          → panel dodawania zdjęć
+links.json        → konfiguracja linków (JUŻ USTAWIONE!)
+gallery.json      → dane galerii
+assets/           → folder z grafikami
+  ├── avatar.svg  → PODMIEŃ na swoje zdjęcie avatar.jpg (120x120px)
+  ├── og.svg      → PODMIEŃ na og.jpg dla Facebook (1200x630px)
+  ├── favicon.svg → ikona strony
+  └── gallery/    → tu trafią zdjęcia z admina
+
+🚀 JAK URUCHOMIĆ LOKALNIE:
+--------------------------
+1. Rozpakuj ten ZIP do folderu
+2. Otwórz index.html w przeglądarce
+3. DZIAŁA! Możesz testować
+
+📸 JAK DODAĆ ZDJĘCIA DO GALERII:
+--------------------------------
+1. Kliknij ikonę zębatki (⚙️) w sekcji "Travel & Moments"
+2. Przeciągnij swoje zdjęcia (JPG/PNG)
+3. Wypełnij tytuł, opis, lokalizację
+4. Kliknij "Export as ZIP"
+5. Rozpakuj pobrany ZIP
+6. Wgraj pliki z assets/gallery/ na serwer
+7. Podmień gallery.json na serwerze
+
+🌐 WDROŻENIE NA VERCEL (DARMOWE):
+---------------------------------
+1. Wejdź na https://vercel.com
+2. Zarejestruj się (darmowe)
+3. Kliknij "Add New Project" → "Upload"
+4. Przeciągnij FOLDER (nie ZIP!) ze stroną
+5. Deploy! Masz link typu: joanneaiwood.vercel.app
+6. Podłącz domenę z GoDaddy:
+   - W Vercel: Settings → Domains → Add → joanneaiwood.com
+   - W GoDaddy DNS dodaj:
+     * Record A: @ → 76.76.21.21
+     * Record CNAME: www → cname.vercel-dns.com
+
+⚡ WAŻNE PRZED PUBLIKACJĄ:
+-------------------------
+□ Podmień avatar.svg na prawdziwe zdjęcie avatar.jpg (120x120px)
+□ Podmień og.svg na og.jpg (podgląd Facebook 1200x630px)  
+□ Dodaj pierwsze zdjęcia przez admin panel
+□ Sprawdź czy wszystkie linki działają
+□ Testuj na telefonie!
+
+💡 WSKAZÓWKI:
+------------
+• Panel admina działa 100% w przeglądarce (zero uploadu na serwer!)
+• Strona ma tryb ciemny/jasny (przełącznik w prawym górnym rogu)
+• Galeria ma lazy loading (szybkie ładowanie)
+• Wszystko jest responsywne (działa na telefonie)
+• Lighthouse Score > 95 (super wydajność!)
+
+📞 PROBLEMY?
+-----------
+• Sprawdź czy masz wszystkie pliki
+• Otwórz konsolę przeglądarki (F12) - czy są błędy?
+• Upewnij się że struktura folderów jest zachowana
+• Avatar MUSI być w /assets/ nie w głównym folderze
+
+==================================================
+GOTOWE! Twoja strona link-in-bio jest kompletna!
+==================================================

@@ -1,0 +1,28 @@
+====================================
+🔧 POPRAWKA - WSZYSTKIE LINKI DZIAŁAJĄ!
+====================================
+
+Problem: Przeglądarka blokowała ładowanie links.json lokalnie (CORS)
+Rozwiązanie: Dane linków są teraz osadzone bezpośrednio w app.js
+
+TERAZ WSZYSTKIE 6 LINKÓW DZIAŁA:
+---------------------------------
+✅ Fanvue (FEATURED z badge)
+✅ Telegram VIP (FEATURED z badge)  
+✅ Instagram @joanne_aiwood
+✅ Instagram @j_aiwood
+✅ Instagram @jo.aiwood
+✅ Buy Me a Coffee
+
+JAK SPRAWDZIĆ:
+--------------
+1. Rozpakuj ten ZIP
+2. Otwórz index.html w przeglądarce
+3. Wszystkie linki powinny być widoczne!
+
+Jeśli nadal widzisz tylko 1 link:
+- Wyczyść cache przeglądarki (Ctrl+F5)
+- Spróbuj w trybie incognito
+- Sprawdź konsolę (F12) czy nie ma błędów
+
+====================================

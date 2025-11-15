@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "name": "Joanne Aiwood",
+    "tagline": "NYC heart, world soul — AI creator & traveler",
+    "avatar": "/assets/avatar.jpg",
+    "locale": "en",
+    "siteUrl": "https://joanneaiwood.com"
+  },
+  "featured": [
+    {
+      "label": "Subscribe on Fanvue",
+      "url": "http://www.fanvue.com/love_joanna.a",
+      "icon": "fanvue",
+      "badge": "Exclusive",
+      "dataCampaign": "featured",
+      "dataContent": "fanvue_primary"
+    },
+    {
+      "label": "VIP Telegram",
+      "url": "https://t.me/+hoBUoJANcsdlMWVk",
+      "icon": "telegram",
+      "badge": "VIP",
+      "dataCampaign": "featured",
+      "dataContent": "telegram_vip"
+    }
+  ],
+  "links": [
+    {
+      "label": "Instagram @joanne_aiwood",
+      "url": "https://www.instagram.com/joanne_aiwood",
+      "icon": "instagram",
+      "dataCampaign": "social",
+      "dataContent": "instagram_main"
+    },
+    {
+      "label": "Instagram @j_aiwood",
+      "url": "https://www.instagram.com/j_aiwood",
+      "icon": "instagram",
+      "dataCampaign": "social",
+      "dataContent": "instagram_alt"
+    },
+    {
+      "label": "Instagram @jo.aiwood",
+      "url": "https://www.instagram.com/jo.aiwood",
+      "icon": "instagram",
+      "dataCampaign": "social",
+      "dataContent": "instagram_third"
+    },
+    {
+      "label": "Buy Me a Coffee",
+      "url": "https://buymeacoffee.com/love_joanna.a",
+      "icon": "buymeacoffee",
+      "dataCampaign": "monetization",
+      "dataContent": "buymeacoffee"
+    }
+  ],
+  "latest": {
+    "title": "New drop tonight — don't miss it.",
+    "url": "http://www.fanvue.com/love_joanna.a"
+  }
+}
