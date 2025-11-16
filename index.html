@@ -287,12 +287,40 @@
             color: var(--text-primary);
         }
         
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-        }
+       .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1;
+    background: var(--bg-secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
         
         .gallery-placeholder {
             text-align: center;
@@ -431,7 +459,18 @@
                 <h2>Travel & Moments</h2>
             </div>
             <div class="gallery-grid">   
-
+ <!-- Zdjęcie 1 -->
+    <div class="gallery-item">
+        <img src="/assets/photo1.jpg" alt="Travel photo 1">
+    </div>
+ <!-- Zdjęcie 2 -->
+    <div class="gallery-item">
+        <img src="/assets/photo2.jpg" alt="Travel photo 2">
+    </div>
+ <!-- Zdjęcie 3 -->
+    <div class="gallery-item">
+        <img src="/assets/photo3.jpg" alt="Travel photo 3">
+    </div>                               
     <!-- Zdjęcie 4 -->
     <div class="gallery-item">
         <img src="/assets/photo4.jpg" alt="Travel photo 4">
