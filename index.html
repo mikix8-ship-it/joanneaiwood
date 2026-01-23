@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanne Aiwood — NYC heart, world soul</title>
+    <meta name="description" content="Digital muse & traveler. Exclusive content and creative journey.">
+    <link rel="canonical" href="https://joanneaiwood.com">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joanneaiwood.com">
+    <meta property="og:title" content="Joanne Aiwood — NYC heart, world soul">
+    <meta property="og:description" content="Digital muse & traveler. Exclusive content and creative journey.">
+    <meta property="og:image" content="/assets/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --text-tertiary: #adb5bd;
+            --border-color: #dee2e6;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --accent: #ff006e;
+            --accent-hover: #d90050;
+            --success: #10b981;
+            --link-bg: rgba(255, 255, 255, 0.95);
+            --link-hover: rgba(248, 249, 250, 0.98);
+            --modal-overlay: rgba(0, 0, 0, 0.5);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #2a2a2a;
+            --text-primary: #e5e7eb;
+            --text-secondary: #9ca3af;
+            --text-tertiary: #6b7280;
+            --border-color: #374151;
+            --link-bg: rgba(26, 26, 26, 0.95);
+            --link-hover: rgba(42, 42, 42, 0.98);
+            --modal-overlay: rgba(0, 0, 0, 0.8);
+        }
+        
+        html { 
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            transition: var(--transition);
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Background Image */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        [data-theme="dark"] body::before {
+            opacity: 0.05;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 50;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-primary);
+        }
+        
+        .sun-icon { display: block; }
+        .moon-icon { display: none; }
+        
+        [data-theme="dark"] .sun-icon { display: none; }
+        [data-theme="dark"] .moon-icon { display: block; }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .profile {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .avatar-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            background: var(--bg-secondary);
+        }
+        
+        .avatar-status {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            background: var(--success);
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+        
+        .profile-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            color: var(--text-primary);
+        }
+        
+        .profile-tagline {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin: 0 0 20px;
+        }
+        
+        .share-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .share-btn, .qr-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .share-btn:hover, .qr-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .share-btn:hover svg, .qr-btn:hover svg {
+            stroke: white;
+        }
+        
+        .links-section {
+            margin-bottom: 40px;
+        }
+        
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            background: var(--link-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            backdrop-filter: blur(10px);
+        }
+        
+        .link-item:hover {
+            background: var(--link-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .link-item.featured {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: white;
+            border: none;
+        }
+        
+        .link-item.featured:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .link-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .link-text {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .link-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .gallery-section {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        
+        .gallery-header h2 {
+            font-size: 24px;
+            margin: 0;
+            color: var(--text-primary);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .gallery-placeholder {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+            background: var(--bg-secondary);
+            border-radius: 12px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 640px) {
+            .container { padding: 24px 16px; }
+            .profile-name { font-size: 24px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg class="sun-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+    
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="avatar-container">
+                <img src="/assets/avatar.jpg" alt="Joanne Aiwood" class="avatar" onerror="this.src='/assets/avatar.svg'">
+                <div class="avatar-status"></div>
+            </div>
+            <h1 class="profile-name">Joanne Aiwood</h1>
+            <p class="profile-tagline">NYC heart, world soul — Digital muse & traveler</p>
+            
+            <!-- Share Actions -->
+            <div class="share-actions">
+                <button class="share-btn" id="shareBtn" aria-label="Share profile">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                </button>
+                <button class="qr-btn" id="qrBtn" aria-label="Show QR code">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="3" height="3"></rect>
+                        <rect x="18" y="18" width="3" height="3"></rect>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        
+        <!-- Links Section -->
+        <section class="links-section">
+            <!-- Featured Links -->
+            <a href="http://www.fanvue.com/love_joanna.a" target="_blank" class="link-item featured">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7v10c0 5.5 4.5 10 10 10s10-4.5 10-10V7l-10-5zm0 2.2l8 4v8.8c0 4.4-3.6 8-8 8s-8-3.6-8-8V8.2l8-4z"/>
+                    <circle cx="12" cy="13" r="2"/>
+                </svg>
+                <span class="link-text">Subscribe on Fanvue</span>
+                <span class="link-badge">Exclusive</span>
+            </a>
+            
+            <a href="https://t.me/+hoBUoJANcsdlMWVk" target="_blank" class="link-item featured">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.56l-1.63 7.69c-.12.56-.44.7-.9.43l-2.48-1.83-1.2 1.15c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.16c.2-.18-.04-.28-.31-.1l-5.68 3.58-2.45-.77c-.53-.17-.54-.53.11-.79l9.57-3.69c.44-.16.83.11.69.77z"/>
+                </svg>
+                <span class="link-text">VIP Telegram</span>
+                <span class="link-badge">VIP</span>
+            </a>
+            
+            <!-- Regular Links -->
+            <a href="https://www.instagram.com/joanne_aiwood" target="_blank" class="link-item">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                </svg>
+                <span class="link-text">Instagram @joanne_aiwood</span>
+            </a>
+            
+            <a href="https://www.instagram.com/j_aiwood" target="_blank" class="link-item">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                </svg>
+                <span class="link-text">Instagram @j_aiwood</span>
+            </a>
+            
+            <a href="https://www.instagram.com/jo.aiwood" target="_blank" class="link-item">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                </svg>
+                <span class="link-text">Instagram @jo.aiwood</span>
+            </a>
+            
+            <a href="https://buymeacoffee.com/love_joanna.a" target="_blank" class="link-item">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 8h-1V6c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v10c0 2.97 2.16 5.43 5 5.91V22h6v-.09c2.84-.48 5-2.94 5-5.91h1c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zm0 4h-1v-2h1v2zm-9 7c0 .55-.45 1-1 1s-1-.45-1-1v-2c0-.55.45-1 1-1s1 .45 1 1v2z"/>
+                </svg>
+                <span class="link-text">Buy Me a Coffee</span>
+            </a>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="gallery-header">
+                <h2>Travel & Moments</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-placeholder">
+                    <p>Gallery coming soon...</p>
+                    <p style="font-size: 14px;">Add photos via GitHub</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Joanne Aiwood. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Share button
+        document.getElementById('shareBtn').addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Joanne Aiwood',
+                        text: 'NYC heart, world soul — Digital muse & traveler',
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.log('Share cancelled');
+                }
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        });
+        
+        // QR Code (simplified)
+        document.getElementById('qrBtn').addEventListener('click', () => {
+            alert('QR Code feature coming soon!');
+        });
+        
+        // Add UTM parameters to links
+        document.querySelectorAll('.link-item').forEach((link, index) => {
+            const url = new URL(link.href);
+            if (!url.searchParams.has('utm_source')) {
+                url.searchParams.set('utm_source', 'joanneaiwood.com');
+                url.searchParams.set('utm_medium', 'linkinbio');
+                url.searchParams.set('utm_campaign', link.classList.contains('featured') ? 'featured' : 'social');
+                url.searchParams.set('utm_content', link.querySelector('.link-text').textContent.toLowerCase().replace(/\s+/g, '_'));
+                link.href = url.toString();
+            }
+        });
+    </script>
+</body>
+</html>
